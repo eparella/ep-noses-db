@@ -21,9 +21,11 @@ app = Flask(__name__)
 cors = CORS(app)
 
 app.config['MYSQL_DATABASE_USER'] = 'admin'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
+app.config['MYSQL_DATABASE_PASSWORD'] = 'nosesadmin'
+#app.config['MYSQL_DATABASE_PASSWORD'] = 'csc492_ij'
 app.config['MYSQL_DATABASE_DB'] = 'sealDB'
 app.config['MYSQL_DATABASE_HOST'] = 'noses-sealdb.cbhu3f3kpqob.us-east-1.rds.amazonaws.com'
+#app.config['MYSQL_DATABASE-HOST'] = 'database-this-is-the-last-time.cvrgneqrnjcb.us-east-2.rds.amazonaws.com'
 
 mysql.init_app(app)
 app.config['DEBUG'] = True
@@ -91,9 +93,9 @@ def sendEmailMessage_passwordChangedNotification(emailDestination, firstName):
     mail.send(msg)
     return "Message sent!"
 
-# @app.route('/', methods=['GET'])
-# def root():
-# 	return render_template('index.html')
+@app.route('/', methods=['GET'])
+def root():
+    return render_template('index.html')
 
 # Deletes a particular observation from the database
 @app.route('/delete', methods=['POST', 'GET'])
