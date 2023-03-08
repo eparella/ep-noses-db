@@ -252,7 +252,7 @@ export class BacklogSpreadsheetTuple extends ParentTuple {
         if ((acceptableValueList.indexOf(valueAsString) > -1) == false) {
           let value = parseInt(valueAsString);
 
-          if (value == NaN) {
+          if (Number.isNaN(value)) {
             var error = new TupleProcessingError(this.jsonName_sealAgeCode, "Age: received invalid age code: " + valueAsString);
             tuple.processingErrorList.push(error);
           }
@@ -502,7 +502,7 @@ export class BacklogSpreadsheetTuple extends ParentTuple {
         }  
       }
 
-      else if (field[KEY] == this.jsonName_sealCurvilinearLength) {
+      /*else if (field[KEY] == this.jsonName_sealCurvilinearLength) {
         tuple.sealCurvilinearLength = valueAsString;
         try {
           if (tuple.sealCurvilinearLength != "") {
@@ -513,7 +513,7 @@ export class BacklogSpreadsheetTuple extends ParentTuple {
           var error = new TupleProcessingError(this.jsonName_sealCurvilinearLength, "Crv. Length: expected number, or empty. Instead: " + value);
           tuple.processingErrorList.push(error);
         }  
-      }
+      }*/
 
       else if (field[KEY] == this.jsonName_sealAxillaryGirth) {
         tuple.sealAxillaryGirth = valueAsString;

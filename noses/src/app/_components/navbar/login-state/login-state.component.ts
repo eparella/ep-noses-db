@@ -72,13 +72,17 @@ export class LoginStateComponent implements OnInit {
    * 
    */
   updatePrivelege() {
+    //console.log("Check your privilege.");
+    //console.log(this.loggedInUser.isAdmin);
     if (this.currentUserIsValid == false) {
       this.isAdmin = false;
       this.isAtLeastFieldLeader = false;
     }
     else {
-      if (this.loggedInUser.isAdmin == 3) {
+      if (this.loggedInUser.isAdmin == -1) {
+        //console.log("Here");
         this.isAdmin = true;
+        this.loggedInUser.isAdmin = 3;
         this.isAtLeastFieldLeader = true;
       } 
       else if(this.loggedInUser.isAdmin == 2) {

@@ -16,38 +16,46 @@ export class ParentTuple {
     /**
    * List of variables that are the names of each of the columns in the spreadsheet submitted by the user.
    */
-  jsonName_fieldLeaderInitials = "Initials";
+  jsonName_fieldLeaderInitials = "Field Initials";
+  jsonName_season = "Breeding Season";
   jsonName_dateOfRecording = "Date";
   jsonName_locationCode = "Loc.";
+  
+  jsonName_sealSex = "Sex";
+  jsonName_sealAgeCode = "Age";
+  jsonName_sealHasPupQuantity = "Pup?";
+
   jsonName_mark1_isNew = "New Mark 1?";
   jsonName_mark1_idValue = "Mark 1";
-  jsonName_mark1_positionCode = "Mark 1 Position";
-
-  jsonName_tag1_isNew = "New Tag1?";
-  jsonName_tag1_idValue = "Tag1 #"
-  jsonName_tag1_positionCode = "Tag1 Pos."
-
-  jsonName_sealAgeCode = "Age";
-  jsonName_sealSex = "Sex";
-  jsonName_sealHasPupQuantity = "Pup?";
+  jsonName_mark1_positionCode = "Mark 1 Pos.";
 
   jsonName_mark2_isNew = "New Mark 2?";
   jsonName_mark2_idValue = "Mark 2";
-  jsonName_mark2_positionCode = "Mark 2 Position";
+  jsonName_mark2_positionCode = "Mark 2 Pos.";
+  
+  jsonName_tag1_isNew = "New Tag1?";
+  jsonName_tag1_color = "Tag1 Color";
+  jsonName_tag1_idValue = "Tag1 #";
+  jsonName_tag1_flipper = "Tag1 Flipper";
+  jsonName_tag1_positionCode = "Tag1 Pos.";
+  jsonName_tag1_spike = "Tag1 Spike";
 
   jsonName_tag2_isNew = "New Tag2?";
-  jsonName_tag2_idValue = "Tag2 #"
-  jsonName_tag2_positionCode = "Tag2 Pos."
+  jsonName_tag2_color = "Tag2 Color";
+  jsonName_tag2_idValue = "Tag2 #";
+  jsonName_tag2_flipper = "Tag2 Flipper";
+  jsonName_tag2_positionCode = "Tag2 Pos.";
+  jsonName_tag2_spike = "Tag2 Spike";
 
   jsonName_sealMoltPercentage = "Molt (%)";
   jsonName_sealStandardLength =  "St. Length";
-  jsonName_sealCurvilinearLength = "Crv. Length";
   jsonName_sealAxillaryGirth = "Ax. Girth";
+  //jsonName_sealCurvilinearLength = "Crv. Length";
   jsonName_sealMass = "Mass";
   jsonName_sealTare = "Tare";
   jsonName_sealMassTare = "Mass-Tare";
   jsonName_sealLastSeenAsPupDate = "Last seen as P";
-  jsonName_sealFirstSeenAsWeaner = "1st seen as W";
+  jsonName_sealFirstSeenAsWeaner = "First seen as W";
   jsonName_weanDateRange = "Range (days)";
   jsonName_comments = "Comments";
 
@@ -75,7 +83,7 @@ export class ParentTuple {
                                   this.jsonName_tag2_positionCode,
                                   this.jsonName_sealMoltPercentage,
                                   this.jsonName_sealStandardLength,
-                                  this.jsonName_sealCurvilinearLength,
+                                  //this.jsonName_sealCurvilinearLength,
                                   this.jsonName_sealAxillaryGirth,
                                   this.jsonName_sealMass,
                                   this.jsonName_sealTare,
@@ -109,7 +117,7 @@ export class ParentTuple {
                                       {jsonName: this.jsonName_tag2_positionCode, objectName: "tag2_positionCode"},
                                       {jsonName: this.jsonName_sealMoltPercentage, objectName: "sealMoltPercentage"},
                                       {jsonName: this.jsonName_sealStandardLength, objectName: "sealStandardLength"},
-                                      {jsonName: this.jsonName_sealCurvilinearLength, objectName: "sealCurvilinearLength"},
+                                      //{jsonName: this.jsonName_sealCurvilinearLength, objectName: "sealCurvilinearLength"},
                                       {jsonName: this.jsonName_sealAxillaryGirth, objectName: "sealAxillaryGirth"},
                                       {jsonName: this.jsonName_sealMass, objectName: "sealMass"},
                                       {jsonName: this.jsonName_sealTare, objectName: "sealTare"},
