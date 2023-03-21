@@ -592,6 +592,31 @@ export class BacklogSpreadsheetTuple extends ParentTuple {
       else if (field[KEY] == (this.jsonName_sealMassTare)) {
       }
 
+      else if (field[KEY] == (this.jsonName_breedingSeason)) {
+        tuple.breedingSeason = valueAsString;
+      }
+
+      else if (field[KEY] == (this.jsonName_tag1_color)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_tag1_flipper)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_tag1_spike)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_tag2_color)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_tag2_flipper)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_tag2_spike)) {
+      }
+
+      else if (field[KEY] == (this.jsonName_sealMassTare)) {
+      }
+
       else {
         // somehow we received a field that wasn't in our known list of fields
         console.log("ERROR: NO MATCH");

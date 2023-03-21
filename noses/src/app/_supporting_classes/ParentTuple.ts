@@ -17,7 +17,7 @@ export class ParentTuple {
    * List of variables that are the names of each of the columns in the spreadsheet submitted by the user.
    */
   jsonName_fieldLeaderInitials = "Field Initials";
-  jsonName_season = "Breeding Season";
+  jsonName_breedingSeason = "Breeding Season";
   jsonName_dateOfRecording = "Date";
   jsonName_locationCode = "Loc.";
   
@@ -64,23 +64,30 @@ export class ParentTuple {
    * Each of the above defined variables in a list.
    */
   SpreadsheetAttributeList = [this.jsonName_fieldLeaderInitials,
+                                  this.jsonName_breedingSeason,
                                   this.jsonName_dateOfRecording,
                                   this.jsonName_locationCode,
+                                  this.jsonName_sealSex,
+                                  this.jsonName_sealAgeCode,
+                                  this.jsonName_sealHasPupQuantity,
                                   this.jsonName_mark1_isNew,
                                   this.jsonName_mark1_idValue,
                                   this.jsonName_mark1_positionCode,
-                                  this.jsonName_tag1_isNew,
-                                  this.jsonName_tag1_idValue,
-                                  this.jsonName_tag1_positionCode,
-                                  this.jsonName_sealAgeCode,
-                                  this.jsonName_sealSex,
-                                  this.jsonName_sealHasPupQuantity,
                                   this.jsonName_mark2_isNew,
                                   this.jsonName_mark2_idValue,
                                   this.jsonName_mark2_positionCode,
+                                  this.jsonName_tag1_isNew,
+                                  this.jsonName_tag1_color,
+                                  this.jsonName_tag1_idValue,
+                                  this.jsonName_tag1_flipper,
+                                  this.jsonName_tag1_positionCode,
+                                  this.jsonName_tag1_spike,
                                   this.jsonName_tag2_isNew,
+                                  this.jsonName_tag2_color,
                                   this.jsonName_tag2_idValue,
+                                  this.jsonName_tag2_flipper,
                                   this.jsonName_tag2_positionCode,
+                                  this.jsonName_tag2_spike,
                                   this.jsonName_sealMoltPercentage,
                                   this.jsonName_sealStandardLength,
                                   //this.jsonName_sealCurvilinearLength,
@@ -98,23 +105,30 @@ export class ParentTuple {
    * This list is actually a map of jsonNames to objectNames, which will make it easier
    */
   jsonName_to_objectName_map =  [ {jsonName: this.jsonName_fieldLeaderInitials, objectName: "fieldLeaderList"},
+                                      {jsonName: this.jsonName_breedingSeason, objectName: "breedingSeason"},
                                       {jsonName: this.jsonName_dateOfRecording, objectName: "dateOfRecording"},
                                       {jsonName: this.jsonName_locationCode, objectName: "locationCode"},
+                                      {jsonName: this.jsonName_sealSex, objectName: "sealSex"},
+                                      {jsonName: this.jsonName_sealAgeCode, objectName: "sealAgeCode"},
+                                      {jsonName: this.jsonName_sealHasPupQuantity, objectName: "sealHasPupQuantity"},
                                       {jsonName: this.jsonName_mark1_isNew, objectName: "mark1_isNew?"},
                                       {jsonName: this.jsonName_mark1_idValue, objectName: "mark1_idValue"},
                                       {jsonName: this.jsonName_mark1_positionCode, objectName: "mark1_positionCode"},
-                                      {jsonName: this.jsonName_tag1_isNew, objectName: "tag1_isNew?"},
-                                      {jsonName: this.jsonName_tag1_idValue, objectName: "tag1_idValue"},
-                                      {jsonName: this.jsonName_tag1_positionCode, objectName: "tag1_positionCode"},
-                                      {jsonName: this.jsonName_sealAgeCode, objectName: "sealAgeCode"},
-                                      {jsonName: this.jsonName_sealSex, objectName: "sealSex"},
-                                      {jsonName: this.jsonName_sealHasPupQuantity, objectName: "sealHasPupQuantity"},
                                       {jsonName: this.jsonName_mark2_isNew, objectName: "mark2_isNew?"},
                                       {jsonName: this.jsonName_mark2_idValue, objectName: "mark2_idValue"},
                                       {jsonName: this.jsonName_mark2_positionCode, objectName: "mark2_positionCode"},
+                                      {jsonName: this.jsonName_tag1_isNew, objectName: "tag1_isNew?"},
+                                      {jsonName: this.jsonName_tag1_color, objectName: "tag1_color"},
+                                      {jsonName: this.jsonName_tag1_idValue, objectName: "tag1_idValue"},
+                                      {jsonName: this.jsonName_tag1_flipper, objectName: "tag1_flipper"},
+                                      {jsonName: this.jsonName_tag1_positionCode, objectName: "tag1_positionCode"},
+                                      {jsonName: this.jsonName_tag1_spike, objectName: "tag1_spike"},
                                       {jsonName: this.jsonName_tag2_isNew, objectName: "tag2_isNew?"},
+                                      {jsonName: this.jsonName_tag2_color, objectName: "tag2_color"},
                                       {jsonName: this.jsonName_tag2_idValue, objectName: "tag2_idValue"},
+                                      {jsonName: this.jsonName_tag2_flipper, objectName: "tag2_flipper"},
                                       {jsonName: this.jsonName_tag2_positionCode, objectName: "tag2_positionCode"},
+                                      {jsonName: this.jsonName_tag2_spike, objectName: "tag2_spike"},
                                       {jsonName: this.jsonName_sealMoltPercentage, objectName: "sealMoltPercentage"},
                                       {jsonName: this.jsonName_sealStandardLength, objectName: "sealStandardLength"},
                                       //{jsonName: this.jsonName_sealCurvilinearLength, objectName: "sealCurvilinearLength"},
@@ -124,7 +138,7 @@ export class ParentTuple {
                                       {jsonName: this.jsonName_sealMassTare, objectName: "sealMassTare"},
                                       {jsonName: this.jsonName_sealLastSeenAsPupDate, objectName: "sealLastSeenAsPupDate"},
                                       {jsonName: this.jsonName_sealFirstSeenAsWeaner, objectName: "sealFirstSeenAsWeaner"},
-                                      {jsonName: this.jsonName_weanDateRange, objectName: "weanDateRangeange"},
+                                      {jsonName: this.jsonName_weanDateRange, objectName: "weanDateRange"},
                                       {jsonName: this.jsonName_comments, objectName: "comments"},
                                       
                                     ];
@@ -134,6 +148,7 @@ export class ParentTuple {
 
   // other bookkeeping
   fieldLeaderInitials : string;
+  breedingSeason : string;
   locationCode : string;
 
   // seal attributes
@@ -153,9 +168,11 @@ export class ParentTuple {
   tag1_idValue : string;
   tag1_isNew : string;
   tag1_positionCode : string;
+  tag1_color : string;
   tag2_idValue : string;
   tag2_isNew : string;
   tag2_positionCode : string;
+  tag2_color : string;
 
   sealId : number
 
@@ -170,6 +187,7 @@ export class ParentTuple {
     //Initialize the entire object to blank attributes
     this.originalJsonInput = null;
     this.fieldLeaderInitials = "";
+    this.breedingSeason = "";
     // this.year = null;
     this.locationCode = "";
     this.sealSex = "";
@@ -184,9 +202,12 @@ export class ParentTuple {
     this.tag1_idValue = "";
     this.tag1_isNew = "";
     this.tag1_positionCode = "";
+    this.tag1_color = "";
+
     this.tag2_idValue = "";
     this.tag2_isNew = "";
     this.tag2_positionCode = "";
+    this.tag2_color = "";
     
     if (tupleAsJson != null) {
       // the json field
@@ -213,7 +234,7 @@ export class ParentTuple {
    * @param source 
    */
   public copy (source : ParentTuple) {
-    this.sealHasPup = Object.assign("", source.sealHasPup)
+    this.sealHasPup = Object.assign("", source.sealHasPup);
     this.comments = Object.assign("", source.comments);
     this.locationCode = Object.assign("", source.locationCode);
     this.mark1_idValue = Object.assign("", source.mark1_idValue);
@@ -231,6 +252,9 @@ export class ParentTuple {
     this.tag2_idValue = Object.assign("", source.tag2_idValue);
     this.tag2_isNew = Object.assign("", source.tag2_isNew);
     this.tag2_positionCode = Object.assign("", source.tag2_positionCode);
+    this.breedingSeason = Object.assign("", source.breedingSeason);
+    this.tag1_color = Object.assign("", source.tag1_color);
+    this.tag1_color = Object.assign("", source.tag2_color);
   }
 
 }
