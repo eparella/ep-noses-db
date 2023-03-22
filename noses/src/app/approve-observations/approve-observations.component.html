@@ -9,6 +9,7 @@
                 <div class="filter-row-item">
                     <div class="form-group down">
                         <select class="form-control" id="sel1" #filterName>
+                            <!--option>Breeding Season</option-->
                             <option>Tag</option>
                             <option>Mark</option>
                             <option>Sex</option>
@@ -72,6 +73,11 @@
                     <th mat-header-cell *matHeaderCellDef> StagedID </th>
                     <td mat-cell *matCellDef="let obs"> {{ obs.StagedID }} </td>
                 </ng-container>
+
+                <!--ng-container matColumnDef="BreedingSeason">
+                    <th mat-header-cell *matHeaderCellDef> Breeding Season </th>
+                    <td mat-cell *matCellDef="let obs"> {{ obs.BreedinSeason }} </td>
+                </ng-container-->
 
                 <ng-container matColumnDef="Age Class">
                     <th mat-header-cell *matHeaderCellDef> Age Class </th>

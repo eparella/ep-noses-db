@@ -81,8 +81,8 @@ export class LoginStateComponent implements OnInit {
     else {
       if (this.loggedInUser.isAdmin == -1) {
         //console.log("Here");
-        this.isAdmin = true;
-        this.loggedInUser.isAdmin = 3;
+        this.isAdmin = false;
+        this.loggedInUser.isAdmin = 2;
         this.isAtLeastFieldLeader = true;
       } 
       else if(this.loggedInUser.isAdmin == 2) {

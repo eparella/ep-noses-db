@@ -36,6 +36,7 @@ export class ApproveObservationsComponent implements OnInit {
   uniqDates: any = [];
   uniqAgeClass: any = ["SA", "W", "P", "Any"]; // when I get the data I will change this
   uniqGender: any = ["M", "F ", "Any"]; // when I get the data I will change this
+  //breedingSeason: any;
 
   filterSealsBy: any;
   filterYear: String;
@@ -73,16 +74,16 @@ export class ApproveObservationsComponent implements OnInit {
     
   }
 
-  filterss = [{name:"Breeding Season", value:"2019"}, {name:"Tag", value:"T3456"}];
+  //filterss = [{name:"Breeding Season", value:"2019"}, {name:"Tag", value:"T3456"}];
 
   ngOnInit() {
 
     this.apiService.getStaged().subscribe((observations: any)=>{
       if(this.isAdmin) {
-        this.displayedColumns = ['Checked', 'StagedID', 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
+        this.displayedColumns = ['Checked', 'StagedID', /*'Breeding Season',*/ 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
         this.notReady = false;
       } else {
-        this.displayedColumns = ['Checked', 'StagedID', 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
+        this.displayedColumns = ['Checked', 'StagedID', /*'Breeding Season',*/ 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
         this.notReady = false;
       }
       this.observations = observations;
@@ -202,10 +203,10 @@ export class ApproveObservationsComponent implements OnInit {
   filterObs() {
     this.apiService.readNotApproved().subscribe((observations: any)=>{
       if(this.isAdmin) {
-        this.displayedColumns = ['Checked', 'StagedID', 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
+        this.displayedColumns = ['Checked', 'StagedID', /*'Breeding Season',*/ 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
         this.notReady = false;
       } else {
-        this.displayedColumns = ['Checked', 'StagedID', 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
+        this.displayedColumns = ['Checked', 'StagedID', /*'Breeding Season',*/ 'Tags', 'Marks', 'Sex', 'Age Class', 'Comments', 'viewSeal'];
         this.notReady = false;
       }
       this.observations = observations;
