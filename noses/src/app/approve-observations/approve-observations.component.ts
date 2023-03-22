@@ -74,7 +74,7 @@ export class ApproveObservationsComponent implements OnInit {
     
   }
 
-  //filterss = [{name:"Breeding Season", value:"2019"}, {name:"Tag", value:"T3456"}];
+  filterss = [{name:"Breeding Season", value:"2019"}, {name:"Tag", value:"T3456"}];
 
   ngOnInit() {
 
