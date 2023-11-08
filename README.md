@@ -27,7 +27,7 @@ Get Started
 =================
 1. Clone the repo
 2. cd into the Angular project file noses-db/noses/
-* `npm install`
+* `npm install --force`
 * `npm start`
 * NOTE: If any dependency errors are reported, install the dependecy using pip. Ex: `pip install flask`
 3. Run the backend:
